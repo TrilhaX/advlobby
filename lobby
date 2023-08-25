@@ -196,7 +196,7 @@ function autoopencapsuleSummer10()
     end
 end
 
-function autoquestoverlord()
+local function autoquestoverlord()
     while getgenv().autoquestoverlord == true do
         wait(1)
         local args = {
