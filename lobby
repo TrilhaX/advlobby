@@ -1,0 +1,814 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+    Name = "Tempest Hub | Anime Adventures",
+    LoadingTitle = "Tempest Hub",
+    LoadingSubtitle = "By Trilha/Zhy",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = 'TempestHub', -- Create a custom folder for your hub/game
+       FileName = "Tempest Hub(Full)"
+    },
+    Discord = {
+       Enabled = true,
+       Invite = "https://discord.gg/cW6JpmU79a", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = false, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Untitled",
+       Subtitle = "Key System",
+       Note = "No method of obtaining the key is provided",
+       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+ })
+
+ function deleteinfplayer()
+    while getgenv().deleteinfplayer do
+        local player = game.Players.LocalPlayer
+        if not player then
+            return
+        end
+
+        local head = player.Character and player.Character:FindFirstChild("Head")
+        if not head then
+            return
+        end
+
+        local overhead = head:FindFirstChild("_overhead")
+        if not overhead then
+            return
+        end
+
+        local frame = overhead:FindFirstChild("Frame")
+        if not frame then
+            return
+        end
+
+        frame:Destroy()
+        
+        wait(0.1) -- Adiciona um pequeno atraso entre as exclusões para evitar bloqueios
+    end
+end
+
+function dgA()
+    while getgenv().dgCW == true do
+        local ohString1 = "_lobbytemplate_event221"
+
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.request_join_lobby:InvokeServer(ohString1)
+        local ohString1 = "_lobbytemplategreen221"
+
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.request_start_game:InvokeServer(ohString1)
+    end
+end
+
+
+function dgA()
+    while getgenv().dgCP == true do
+        local ohString1 = "_lobbytemplate_event22"
+
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.request_join_lobby:InvokeServer(ohString1)
+        local ohString1 = "_lobbytemplategreen22"
+
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.request_start_game:InvokeServer(ohString1)
+    end
+end
+
+function autochallenge()
+    while getgenv().autochallenge == true do
+        local args = {
+            [1] = "_lobbytemplate320"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.request_join_lobby:InvokeServer(unpack(args))        
+    end
+end
+
+function autoDchallenge()
+    while getgenv().autoDchallenge == true do
+        local args = {
+            [1] = "_lobbytemplate321"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.request_join_lobby:InvokeServer(unpack(args))    
+    end
+end
+
+function autoSummon()
+    while getgenv().autoSummon == true do
+        local ohString1 = "EventClover"
+        local ohString2 = "gems10"
+
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.buy_from_banner:InvokeServer(ohString1, ohString2)
+    end
+end
+
+
+function autoSummon1()
+    while getgenv().autoSummon1 == true do
+        local ohString1 = "EventClover"
+        local ohString2 = "gems"
+
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.buy_from_banner:InvokeServer(ohString1, ohString2)
+    end
+end
+
+function autosummonTicket()
+    while getgenv().autosummonTicket == true do
+        local ohString1 = "EventClover"
+        local ohString2 = "ticket"
+
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.buy_from_banner:InvokeServer(ohString1, ohString2)
+    end
+end
+
+
+function autobuycapsuleSummer1()
+    while getgenv().autobuycapsuleSummer1 == true do
+        wait(1)
+        local args = {
+            [1] = "capsule_summer",
+            [2] = "event",
+            [3] = "event_shop",
+            [4] = "1"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.buy_item_generic:InvokeServer(unpack(args))
+    end
+end
+
+function autobuycapsuleSummer10()
+    while getgenv().autobuycapsuleSummer10 == true do
+        wait(1)
+        local args = {
+            [1] = "capsule_summer",
+            [2] = "event",
+            [3] = "event_shop",
+            [4] = "10"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.buy_item_generic:InvokeServer(unpack(args))
+    end
+end
+
+function autobuycapsuleSummer100()
+    while getgenv().autobuycapsuleSummer100 == true do
+        wait(1)
+        local args = {
+            [1] = "capsule_summer",
+            [2] = "event",
+            [3] = "event_shop",
+            [4] = "100"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.buy_item_generic:InvokeServer(unpack(args))
+    end
+end
+
+
+function autoopencapsuleSummer1()
+    while getgenv().autoopencapsuleSummer1 == true do
+        wait(1)
+        local args = {
+            [1] = "capsule_summer",
+            [2] = {
+                ["use10"] = false
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.use_item:InvokeServer(unpack(args))        
+    end
+end
+
+function autoopencapsuleSummer10()
+    while getgenv().autoopencapsuleSummer10 == true do
+        wait(1)
+        local args = {
+            [1] = "capsule_summer",
+            [2] = {
+                ["use10"] = true
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.use_item:InvokeServer(unpack(args))                         
+    end
+end
+
+function autoquestoverlord()
+    while getgenv().autoquestoverlord == true do
+        wait(1)
+        local args = {
+            [1] = "overlord_daily"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.accept_npc_quest:InvokeServer(unpack(args))
+    end
+end
+    
+function autoreplay()
+    while toggle do
+    local ohString1 = "replay"
+
+    game:GetService("ReplicatedStorage").endpoints.client_to_server.set_game_finished_vote:InvokeServer(ohString1)
+    end
+end
+
+function autonext()
+    while toggle do
+        local args = {
+            [1] = "next_story"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.set_game_finished_vote:InvokeServer(unpack(args))        
+    end
+end
+
+function autoleave()
+    while toggle do
+        local ohString1 = "leave"
+
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.set_game_finished_vote:InvokeServer(ohString1)
+    end
+end
+
+ function autostart()
+    while getgenv().autostart == true do
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.vote_start:InvokeServer()
+    end
+end
+
+ function autoskipwave()
+    while getgenv().autoskipwave == true do
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.vote_wave_skip:InvokeServer()
+    end
+end
+
+ function autoleave()
+    while toggle do
+        local ohString1 = "leave"
+
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.set_game_finished_vote:InvokeServer(ohString1)
+    end
+end
+
+function autotplobby()
+    while getgenv().autotplobby == true do
+    wait(10)    
+    game:GetService("TeleportService"):Teleport(8304191830, LocalPlayer)
+    end
+end
+
+-- Define the auto-sell functions
+function autosellfarm5()
+    while getgenv().autosellfarm5 == true do
+        local args = {
+            [1] = workspace._UNITS.speedwagon
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.sell_unit_ingame:InvokeServer(unpack(args))
+    end
+end
+
+ function deletemap()
+    while toggle do
+        if workspace["_map"] then
+            workspace["_map"]:Destroy()
+        end
+        if workspace["_BASES"] then
+            workspace["_BASES"]:Destroy()
+        end
+        if workspace["_water_blocks"] then
+            workspace["_water_blocks"]:Destroy()
+        end
+        print("Deleted objects.")
+    end
+end
+
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Hide Name")
+
+local Toggle = Tab:CreateToggle({
+    Name = "Hide Name",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    getgenv().deleteinfplayer = Value
+    deleteinfplayer()
+    end,
+ })
+
+local Section = Tab:CreateSection("Delete Map")
+
+local Toggle = Tab:CreateToggle({
+    Name = "Delete Map",
+    CurrentValue = false,
+    Flag = "Toggle2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    getgenv().deletemap = Value
+    deletemap()
+    end,
+ })
+
+local Section = Tab:CreateSection("Auto Replay|Leave|Next|Start|Skip Wave")
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Replay",
+    CurrentValue = false,
+    Flag = "Toggle3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    getgenv().autoreplay = Value
+    autoreplay()
+    end,
+ })
+
+ local Toggle = Tab:CreateToggle({
+    Name = "Auto Leave",
+    CurrentValue = false,
+    Flag = "Toggle4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    getgenv().autoleave = Value
+    autoleave()
+    end,
+ })
+
+ local Toggle = Tab:CreateToggle({
+    Name = "Auto Next",
+    CurrentValue = false,
+    Flag = "Toggle5", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    getgenv().autonext = Value
+    autonext()
+    end,
+ })
+
+ local Toggle = Tab:CreateToggle({
+    Name = "Auto Start",
+    CurrentValue = false,
+    Flag = "Toggle6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    getgenv().autostart = Value
+    autostart()
+    end,
+ })
+
+ local Toggle = Tab:CreateToggle({
+    Name = "Auto Skip Wave",
+    CurrentValue = false,
+    Flag = "Toggle7", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    getgenv().autoskipwave = Value
+    autoskipwave()
+    end,
+ })
+
+local Section = Tab:CreateSection("Auto Sell")
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Sell Farm (Insta Sell)",
+    CurrentValue = false,
+    Flag = "Toggle8", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    getgenv().autosellfarm5 = Value
+    autosellfarm5()
+    end,
+ })
+
+ local Tab = Window:CreateTab("Raid", 4483362458) -- Title, Image
+
+-- Defina a função selectRaid fora do loop for
+local function selectRaid(raidName)
+    local args = {
+        [1] = "_lobbytemplate212"
+    }
+
+    game:GetService("ReplicatedStorage").endpoints.client_to_server.request_join_lobby:InvokeServer(unpack(args))
+    wait(2)
+        local args = {
+            [1] = "_lobbytemplate212",
+            [2] = raidName,
+            [3] = false,
+            [4] = "Hard"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.request_lock_level:InvokeServer(unpack(args))
+        
+    wait(2)
+    local args = {
+        [1] = "_lobbytemplate212"
+    }
+
+    game:GetService("ReplicatedStorage").endpoints.client_to_server.request_start_game:InvokeServer(unpack(args))
+    wait(1)
+end
+
+local raidSections = {
+    ["entertainment_district"] = {
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+    },
+    ["west_city_frieza"] = {
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    },
+    ["uchiha_level"] = {
+    "uchiha_level_1",
+    "uchiha_level_2",
+    "uchiha_level_3",
+    "uchiha_level_4",
+    "uchiha_level_5"
+    },
+    ["west_city_raid"] = {
+    "west_city_raid"
+    },
+    ["demonslayer_raid_1"] = {
+   "demonslayer_raid_1"
+    },
+    ["naruto_raid_1"] = {
+    "naruto_raid_1"
+},
+    ["aot_raid_1"] = {
+    "aot_raid_1"
+    },
+    ["mha_stain"] = {
+    "mha_stain"
+    },
+    ["marineford_sengoku"] = {
+    "marineford_sengoku"
+    },
+    -- Outros grupos de raids e níveis
+}
+
+-- Função para criar toggles
+local function createToggles(section, levels)
+    for _, raidLevel in ipairs(levels) do
+        local raidName = section .. "_level_" .. raidLevel
+        Tab:CreateToggle({
+            Name = raidName,
+            CurrentValue = false,
+            Flag = raidName,
+            Callback = function(Value)
+                if Value then
+                    selectRaid(raidName)
+                end
+            end
+        })
+    end
+end
+
+-- Loop pelos grupos de raids
+for raidGroup, raidLevels in pairs(raidSections) do
+    local sectionName = raidGroup
+    Tab:CreateSection(sectionName)
+    createToggles(raidGroup, raidLevels)
+end
+
+local Tab = Window:CreateTab("Story", 4483362458) -- Title, Image
+
+local function selectMap(mapName)
+    local args = {
+        [1] = "_lobbytemplategreen1"
+    }
+
+    game:GetService("ReplicatedStorage").endpoints.client_to_server.request_join_lobby:InvokeServer(unpack(args))
+    local args = {
+        [1] = "_lobbytemplategreen1",
+        [2] = mapName,
+        [3] = false,
+        [4] = "Normal"
+    }
+
+    game:GetService("ReplicatedStorage").endpoints.client_to_server.request_lock_level:InvokeServer(unpack(args))
+    wait(1)
+    local args = {
+        [1] = "_lobbytemplategreen1"
+    }
+
+    game:GetService("ReplicatedStorage").endpoints.client_to_server.request_start_game:InvokeServer(unpack(args))
+    print("Selected map: " .. mapName)
+end
+
+local mapSections = {
+    ["Naruto Maps"] = {
+        "naruto_level_1",
+        "naruto_level_2",
+        "naruto_level_3",
+        "naruto_level_4",
+        "naruto_level_5",
+        "naruto_level_6"
+    },
+    ["Demon Slayer Maps"] = {
+        "demonslayer_level_1",
+        "demonslayer_level_2",
+        "demonslayer_level_3",
+        "demonslayer_level_4",
+        "demonslayer_level_5",
+        "demonslayer_level_6"
+    },
+    ["AOT Maps"] = {
+        "aot_level_1",
+        "aot_level_2",
+        "aot_level_3",
+        "aot_level_4",
+        "aot_level_5",
+        "aot_level_6"
+    },
+    ["Namek Maps"] = {
+        "namek_level_1",
+        "namek_level_2",
+        "namek_level_3",
+        "namek_level_4",
+        "namek_level_5",
+        "namek_level_6"
+    },
+    ["Marine Ford Maps"] = {
+        "marineford_level_1",
+        "marineford_level_2",
+        "marineford_level_3",
+        "marineford_level_4",
+        "marineford_level_5",
+        "marineford_level_6"
+    },
+    ["Tokyo Ghoul Maps"] = {
+        "tokyoghoul_level_1",
+        "tokyoghoul_level_2",
+        "tokyoghoul_level_3",
+        "tokyoghoul_level_4",
+        "tokyoghoul_level_5",
+        "tokyoghoul_level_6"
+    },
+    ["Hollow Maps"] = {
+        "hueco_level_1",
+        "hueco_level_2",
+        "hueco_level_3",
+        "hueco_level_4",
+        "hueco_level_5",
+        "hueco_level_6"
+    },
+    ["HxH Maps"] = {
+        "hxhant_level_1",
+        "hxhant_level_2",
+        "hxhant_level_3",
+        "hxhant_level_4",
+        "hxhant_level_5",
+        "hxhant_level_6"
+    },
+    ["Fairy Tail Maps"] = {
+        "magnolia_level_1",
+        "magnolia_level_2",
+        "magnolia_level_3",
+        "magnolia_level_4",
+        "magnolia_level_5",
+        "magnolia_level_6"
+    },
+    ["JJK Maps"] = {
+        "jjk_level_1",
+        "jjk_level_2",
+        "jjk_level_3",
+        "jjk_level_4",
+        "jjk_level_5",
+        "jjk_level_6"
+    },
+    ["Clover Maps"] = {
+        "clover_level_1",
+        "clover_level_2",
+        "clover_level_3",
+        "clover_level_4",
+        "clover_level_5",
+        "clover_level_6"
+    },
+    ["Jojo Maps"] = {
+        "jojo_level_1",
+        "jojo_level_2",
+        "jojo_level_3",
+        "jojo_level_4",
+        "jojo_level_5",
+        "jojo_level_6"
+    },
+    ["Opm Maps"] = {
+        "opm_level_1",
+        "opm_level_2",
+        "opm_level_3",
+        "opm_level_4",
+        "opm_level_5",
+        "opm_level_6"
+    },
+    ["7ds Maps"] = {
+        "7ds_level_1",
+        "7ds_level_2",
+        "7ds_level_3",
+        "7ds_level_4",
+        "7ds_level_5",
+        "7ds_level_6"
+    },
+    ["mha Maps"] = {
+        "mha_level_1",
+        "mha_level_2",
+        "mha_level_3",
+        "mha_level_4",
+        "mha_level_5",
+        "mha_level_6"
+    },
+    ["dressrosa Maps"] = {
+        "dressrosa_level_1",
+        "dressrosa_level_2",
+        "dressrosa_level_3",
+        "dressrosa_level_4",
+        "dressrosa_level_5",
+        "dressrosa_level_6"
+    },
+    ["Sao Maps"] = {
+        "sao_level_1",
+        "sao_level_2",
+        "sao_level_3",
+        "sao_level_4",
+        "sao_level_5",
+        "sao_level_6"
+    },
+    ["Berserk Maps"] = {
+        "berserk_level_1",
+        "berserk_level_2",
+        "berserk_level_3",
+        "berserk_level_4",
+        "berserk_level_5",
+        "berserk_level_6"
+    },
+    ["Overlord Maps"] = {
+        "overlord_level_1",
+        "overlord_level_2",
+        "overlord_level_3",
+        "overlord_level_4",
+        "overlord_level_5",
+        "overlord_level_6"
+    },
+}
+
+for mapGroup, mapNames in pairs(mapSections) do
+    local Section = Tab:CreateSection(mapGroup)
+
+    for i, mapName in ipairs(mapNames) do
+        Tab:CreateToggle({
+            Name = mapName,
+            CurrentValue = false,
+            Flag = mapName, -- Usando o nome do mapa como flag para garantir unicidade
+            Callback = function(Value)
+                if Value then
+                    selectMap(mapName)
+                end
+            end
+        })
+    end
+end
+
+
+local Tab = Window:CreateTab("Dungeon", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Dungeon")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Dungeon Cursed Womb",
+   CurrentValue = false,
+   Flag = "Toggle10", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().dgCW = Value
+   dgCW()
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Dungeon Cursed Parade",
+   CurrentValue = false,
+   Flag = "Toggle11", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().dgCP = Value
+   dgCP()
+   end,
+})
+
+local Tab = Window:CreateTab("Auto Quest", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Overlord Quest")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Get Quest Overlord",
+   CurrentValue = false,
+   Flag = "Toggle27", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().autoquestoverlord = Value
+   autoquestoverlord()
+   end,
+})
+
+local Tab = Window:CreateTab("Shop", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Summon")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Summon (Only 10 Roll)",
+   CurrentValue = false,
+   Flag = "Toggle28", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().autoSummon = Value
+   autoSummon()
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Summon (Only 1 Roll)",
+   CurrentValue = false,
+   Flag = "Toggle29", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().autoSummon1 = Value
+   autoSummon1()
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Summon (Only Ticket Summon)",
+   CurrentValue = false,
+   Flag = "Toggle30", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().autosummonTicket = Value
+   autosummonTicket()
+   end,
+})
+
+local Section = Tab:CreateSection("Summer Event")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Buy Capsule (Only 1)",
+   CurrentValue = false,
+   Flag = "Toggle31", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().autobuycapsuleSummer1 = Value
+   autobuycapsuleSummer1()
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Buy Capsule (Only 10)",
+   CurrentValue = false,
+   Flag = "Toggle32", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().autobuycapsuleSummer10 = Value
+   autobuycapsuleSummer10()
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Buy Capsule (Only 100)",
+   CurrentValue = false,
+   Flag = "Toggle33", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().autobuycapsuleSummer100 = Value
+   autobuycapsuleSummer100()
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Open Capsule (Only 1)",
+   CurrentValue = false,
+   Flag = "Toggle34", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().autoopencapsuleSummer1 = Value
+   autoopencapsuleSummer1()
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Open Capsule (Only 10)",
+   CurrentValue = false,
+   Flag = "Toggle35", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().autoopencapsuleSummer10 = Value
+   autoopencapsuleSummer10()
+   end,
+})
+    
+local Tab = Window:CreateTab("Misc", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Misc")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Claim BattlePass",
+   CurrentValue = false,
+   Flag = "Toggle36", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   getgenv().autoclaimbp = Value
+   autoclaimbp()
+   end,
+})
+
+for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+    v:Disable()
+end
+Rayfield:LoadConfiguration()
